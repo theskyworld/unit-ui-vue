@@ -56,9 +56,10 @@ defineExpose({
     ref: buttonElemRef,
 })
 </script>
+<!-- 将注释内容放置外template元素的外部，用于保证当前组件测试的通过（被测试的目标元素为<template>下的最顶层元素且唯一的根元素，前面不包含注释等其它内容） -->
+<!-- 添加button元素的固定样式和动态样式，其中动态样式包含固定的样式名和动态样式名两种 -->
+<!-- 同时设置button元素原生属性disabled、autofocus和type的值 -->
 <template>
-    <!-- 添加button元素的固定样式和动态样式，其中动态样式包含固定的样式名和动态样式名两种 -->
-    <!-- 同时设置button元素原生属性disabled、autofocus和type的值 -->
     <button ref="buttonElemRef" class="u-button" :class="{
         [`u-button--${type}`]: type,
         [`u-button--${size}`]: size,
