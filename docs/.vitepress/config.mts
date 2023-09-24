@@ -2,6 +2,10 @@ import { defineConfig } from "vitepress";
 import VueMacros from "unplugin-vue-macros";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import { fileURLToPath, URL } from "node:url";
+import {
+  containerPreview,
+  componentPreview,
+} from "@vitepress-demo-preview/plugin";
 
 // 自定义网站配置
 export default defineConfig({
@@ -36,7 +40,10 @@ export default defineConfig({
   // 网站主题配置
   themeConfig: {
     // 首页nav bar的内容
-    nav: [{ text: "首页", link: "/" }],
+    nav: [
+      { text: "首页", link: "/" },
+      { text: "组件", link: "/components/button.md" },
+    ],
     // 页脚
     footer: {
       message: "Released under the MIT License.",
@@ -45,6 +52,25 @@ export default defineConfig({
     // 搜索框
     search: {
       provider: "local",
+    },
+
+    // 侧边栏
+    sidebar: [
+      {
+        text: "通用组件",
+        items: [
+          {
+            text: "按钮&nbsp;Button",
+            link: "../components/button.md",
+          },
+        ],
+      },
+    ],
+  },
+  markdown: {
+    config(md) {
+      md.use(containerPreview);
+      md.use(componentPreview);
     },
   },
 });
