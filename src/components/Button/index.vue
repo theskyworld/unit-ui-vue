@@ -1,5 +1,6 @@
 <script setup lang='ts'>
 import { ButtonProps } from './types';
+import { ref } from "vue";
 
 
 
@@ -21,7 +22,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 
 
 /* datas */
-
+const buttonElemRef = ref<HTMLButtonElement>();
 
 
 /* computed */
@@ -39,11 +40,26 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 
 /* useComposition */
 
+
+/** 将获取到的button元素向外进行暴露，用于外部访问button元素
+ * 例如
+const buttonInstanceRef = ref();
+onMounted(() => {
+  console.log(buttonInstanceRef.value.ref); // button元素
+})
+
+  <div>
+    <u-button ref="buttonInstanceRef">button</u-button>
+  </div>
+ */
+defineExpose({
+    ref: buttonElemRef,
+})
 </script>
 <template>
     <!-- 添加button元素的固定样式和动态样式，其中动态样式包含固定的样式名和动态样式名两种 -->
     <!-- 同时设置button元素原生属性disabled、autofocus和type的值 -->
-    <button ref="_ref" class="u-button" :class="{
+    <button ref="buttonElemRef" class="u-button" :class="{
         [`u-button--${type}`]: type,
         [`u-button--${size}`]: size,
         'is-plain': plain,
