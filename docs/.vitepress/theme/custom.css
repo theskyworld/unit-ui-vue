@@ -1,0 +1,12 @@
+/* 首页中部居中布局 */
+.is-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.is-home .main {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
