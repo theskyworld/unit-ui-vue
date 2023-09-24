@@ -24,12 +24,31 @@ describe("test Button.vue", () => {
     expect(wrapper.classes()).toContain("u-button--primary");
 
     // 测试是否存在指定的slot文本内容
-      expect(wrapper.get("button").text()).toBe("button");
+    expect(wrapper.get("button").text()).toBe("button");
     expect(wrapper.get("button").text()).not.toBe("click");
-      
 
     // 测试点击事件
     console.log(wrapper.get("button").trigger("click"));
     expect(wrapper.emitted()).toHaveProperty("click");
+  });
+
+  // 测试disabled属性
+  test("disabled attribute", () => {
+    const wrapper = mount(Button, {
+      props: {
+        disabled: true,
+      },
+      slots: {
+        default: "disabled",
+      },
+    });
+    // 测试是否成功添加了disabled属性
+    expect(wrapper.attributes("disabled")).toBeDefined();
+    // 对元素button元素进行判断
+    expect(wrapper.find("button").element.disabled).toBeDefined();
+
+    // 点击事件应当失效
+    wrapper.get("button").trigger("click");
+    expect(wrapper.emitted()).not.toHaveProperty("click");
   });
 });
