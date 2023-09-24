@@ -1,0 +1,93 @@
+/* 在此处声明样式变量名 */
+/* 参考elementPlus中的色彩进行设计 : https: //element-plus.org/zh-CN/component/color.html */
+/* 使用postcss语法 */
+/* 安装插件 : 
+npm install --save-dev postcss postcss-each、 
+npm install --save-dev postcss postcss-for, 
+npm install --save postcss-color-mix
+npm install --save-dev postcss-each-variables
+ */
+/* 插件官网 : 
+https://github.com/madyankin/postcss-each 、
+https://github.com/antyakushev/postcss-for 
+https://github.com/iamstarkov/postcss-color-mix
+https://github.com/awcross/postcss-each-variables
+*/
+
+:root {
+  /* colors */
+  --u-color-white: #ffffff;
+  --u-color-black: #000000;
+  /* --u-color-primary : #409eff; */
+  --colors: (
+    primary: #409eff,
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399
+  );
+
+  @each $val, $color in var(--colors) {
+    --u-color-$(val): $(color);
+
+    @for $i from 3 to 9 by 2 {
+      --u-color-$(val)-light-$(i): mix(#fff, $(color), .$(i));
+    }
+
+    --u-color-$(val)-light-8: mix(#fff, $(color), 0.8);
+    --u-color-$(val)-dark-2: mix(#000, $(color), 0.2);
+  }
+
+  --u-bg-color: #ffffff;
+  --u-bg-color-page: #f2f3f5;
+  --u-bg-color-overlay: #ffffff;
+  --u-text-color-primary: #303133;
+  --u-text-color-regular: #606266;
+  --u-text-color-secondary: #909399;
+  --u-text-color-placeholder: #a8abb2;
+  --u-text-color-disabled: #c0c4cc;
+  --u-border-color: #dcdfe6;
+  --u-border-color-light: #e4e7ed;
+  --u-border-color-lighter: #ebeef5;
+  --u-border-color-extra-light: #f2f6fc;
+  --u-border-color-dark: #d4d7de;
+  --u-border-color-darker: #cdd0d6;
+  --u-fill-color: #f0f2f5;
+  --u-fill-color-light: #f5f7fa;
+  --u-fill-color-lighter: #fafafa;
+  --u-fill-color-extra-light: #fafcff;
+  --u-fill-color-dark: #ebedf0;
+  --u-fill-color-darker: #e6e8eb;
+  --u-fill-color-blank: #ffffff;
+
+  /* border */
+  --u-border-width: 1px;
+  --u-border-style: solid;
+  --u-border-color-hover: var(--u-text-color-disabled);
+  --u-border: var(--u-border-width) var(--u-border-style) var(--u-border-color);
+  --u-border-radius-base: 4px;
+  --u-border-radius-small: 2px;
+  --u-border-radius-round: 20px;
+  --u-border-radius-circle: 100%;
+
+  /*font*/
+  --u-font-size-extra-large: 20px;
+  --u-font-size-large: 18px;
+  --u-font-size-medium: 16px;
+  --u-font-size-base: 14px;
+  --u-font-size-small: 13px;
+  --u-font-size-extra-small: 12px;
+  --u-font-family: "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5fae\8f6f\96c5\9ed1", Arial,
+    sans-serif;
+  --u-font-weight-primary: 500;
+
+  /*disabled*/
+  --u-disabled-bg-color: var(--u-fill-color-light);
+  --u-disabled-text-color: var(--u-text-color-placeholder);
+  --u-disabled-border-color: var(--u-border-color-light);
+
+  /*animation*/
+  --u-transition-duration: 0.3s;
+  --u-transition-duration-fast: 0.2s;
+}
