@@ -8,7 +8,11 @@ export interface CollapseProps {
   accordion?: boolean;
 }
 
-// 父子组件之间v-model的绑定，用于在父组件中获取当前所有已打开的item的name，实现手风琴
+// 父子组件之间v-model的绑定，用于在使用Collapse时获取当前打开的item
+// 例如
+// const activeItemsNames = ref([]);
+// <u-collapse v-model="activeItemsNames">
+// </u-collapse>;
 export interface CollapseEmits {
   (e: "update:modelValue", values: NameType[]): void;
   (e: "change", values: NameType[]): void;
