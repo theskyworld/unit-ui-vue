@@ -75,6 +75,10 @@ export default defineConfig({
             text: "下拉菜单&nbsp;Dropdown",
             link: "../components/dropdown.md",
           },
+          {
+            text: "消息&nbsp;Message",
+            link: "../components/message.md",
+          },
         ],
       },
     ],
