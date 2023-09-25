@@ -186,12 +186,12 @@ onUnmounted(() => {
     <div v-on="outerEvents" class="u-tooltip" ref="tooltipWrapperElem">
         <!-- 用于触发的区域 -->
         <!-- 动态绑定触发事件 -->
-        <div v-on="events" ref="triggerNodeElem" class="u-tooltip__trigger">
+        <div v-on="events" ref="triggerPopperContainerElem" class="u-tooltip__trigger">
             <slot />
         </div>
         <!-- 用于展示的区域 -->
         <Transition :name="transition">
-            <div v-if="isOpen" ref="popperNodeElem" class="u-tooltip__popper">
+            <div v-if="isOpen" ref="popperContainerElem" class="u-tooltip__popper">
                 <!-- {{ content }}用于接收普通文本字符串内容 -->
                 <!-- slot用于接收DOM元素、组件等内容 -->
                 <slot name="content">
