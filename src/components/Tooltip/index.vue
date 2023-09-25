@@ -191,7 +191,7 @@ onUnmounted(() => {
         </div>
         <!-- 用于展示的区域 -->
         <Transition :name="transition">
-            <div v-show="isOpen" ref="popperNodeElem" class="u-tooltip__popper">
+            <div v-if="isOpen" ref="popperNodeElem" class="u-tooltip__popper">
                 <!-- {{ content }}用于接收普通文本字符串内容 -->
                 <!-- slot用于接收DOM元素、组件等内容 -->
                 <slot name="content">
