@@ -7,8 +7,6 @@
 
   --component-preview-bg: var(--vp-code-block-bg);
   --component-preview-soft: var(--vp-code-block-bg-light);
-
-  
 }
 
 body {
@@ -24,9 +22,6 @@ p {
   color: var(--vp-c-text-1);
 }
 
-
-
-
 /* 首页中部居中布局 */
 .is-home {
   display: flex;
@@ -40,30 +35,31 @@ p {
   align-items: center;
 }
 
-
 /* 折叠面板样式 */
 .u-collapse {
-  border-top : solid 1px var(--vp-c-divider);
-  border-bottom : solid 1px var(--vp-c-divider);
+  border-top: solid 1px var(--vp-c-divider);
+  border-bottom: solid 1px var(--vp-c-divider);
   margin-left: 10px;
 }
 
-
 .u-collapse-item__header {
   background-color: var(--vk-color-primary-dark-2);
-  color : var(--vp-c-text-1);
-  border-color : var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
 }
 
 .u-collapse-item__content {
   background-color: var(--vk-color-primary-dark-2);
-  color : var(--vp-c-text-1);
-  border-color : var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+  border-color: var(--vp-c-divider);
 }
-
 
 /* Tooltip */
 .u-tooltip {
   margin: 0 10px;
 }
 
+/* 下拉菜单 */
+li {
+  list-style: none;
+}

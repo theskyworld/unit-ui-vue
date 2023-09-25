@@ -70,8 +70,6 @@ defineExpose<DropdownInstance>({
             <template #content>
                 <ul class="u-dropdown__menu">
                     <template v-for="item in menuOptions" :key="item.key">
-                        <!-- 用于当divided的值为true时，两个菜单选项之间的分割线 -->
-                        <li v-if="item.divided" role="separator" class="divided-placeholder"></li>
                         <li @click="onItemClick(item)" :id="`dropdown-item-${item.key}`" class="u-dropdown__item"
                             :class="{ 'is-disabled': item.disabled, 'is-divided': item.divided }">
                             <!-- {{ item.label }}</li> -->
