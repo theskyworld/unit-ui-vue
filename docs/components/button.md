@@ -32,3 +32,6 @@ next:
 
 <preview path="../previews/button/disabled.vue" title="禁用" description="被禁用的按钮"></preview>
 
+## 图标
+
+<preview path="../previews/button/icon.vue" title="图标" description="带有图标的按钮"></preview>
