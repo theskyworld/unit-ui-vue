@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import { computed, inject } from 'vue';
 import { CollapseItemProps, collapseContextKey } from './types';
+import UIcon from "../Icon/index.vue";
 
 
 
@@ -89,6 +90,8 @@ const handleClick = () => {
             'is-active': isActive,
         }" :id="`item-header-${name}`" @click="handleClick()">
             <slot name="title">{{ title }}</slot>
+            <!-- 添加图标 -->
+            <u-icon icon="angle-right" class="header-angle"></u-icon>
         </div>
 
         <!-- item中的content部分 -->
