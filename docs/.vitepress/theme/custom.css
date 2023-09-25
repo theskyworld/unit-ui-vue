@@ -41,3 +41,23 @@ p {
 }
 
 
+/* 折叠面板样式 */
+.u-collapse {
+  border-top : solid 1px var(--vp-c-divider);
+  border-bottom : solid 1px var(--vp-c-divider);
+  margin-left: 10px;
+}
+
+
+.u-collapse-item__header {
+  background-color: var(--vk-color-primary-dark-2);
+  color : var(--vp-c-text-1);
+  border-color : var(--vp-c-divider);
+}
+
+.u-collapse-item__content {
+  background-color: var(--vk-color-primary-dark-2);
+  color : var(--vp-c-text-1);
+  border-color : var(--vp-c-divider);
+}
+
