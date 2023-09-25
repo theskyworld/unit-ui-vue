@@ -1,0 +1,16 @@
+.u-icon {
+  --u-icon-color: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--u-icon-color);
+  font-size: inherit;
+}
+
+@each $val in primary, info, success, warning, danger {
+  .u-icon--$(val) {
+    --u-icon-color: var(--u-color-$(val));
+  }
+}
