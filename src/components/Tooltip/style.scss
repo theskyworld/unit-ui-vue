@@ -1,0 +1,104 @@
+.u-tooltip {
+  --u-popover-bg-color: var(--u-bg-color-overlay);
+  --u-popover-font-size: var(--u-font-size-base);
+  --u-popover-border-color: var(--u-border-color);
+  --u-popover-padding: 12px;
+  --u-popover-border-radius: 4px;
+  display: inline-block;
+}
+
+.u-tooltip {
+  .u-tooltip__popper {
+    background: var(--u-popover-bg-color);
+    border-radius: var(--u-popover-border-radius);
+    border: 1px solid var(--u-popover-border-color);
+    padding: var(--u-popover-padding);
+    color: var(--u-text-color-regular);
+    line-height: 1.4;
+    text-align: justify;
+    font-size: var(--u-popover-font-size);
+    box-shadow: var(--u-box-shadow-light);
+    word-break: break-all;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    #arrow,
+    #arrow::before {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      box-sizing: border-box;
+      background: var(--u-popover-bg-color);
+    }
+
+    #arrow {
+      visibility: hidden;
+    }
+
+    #arrow::before {
+      visibility: visible;
+      content: "";
+      transform: rotate(45deg);
+    }
+
+    &[data-popper-placement^="top"] > #arrow {
+      bottom: -5px;
+    }
+
+    &[data-popper-placement^="bottom"] > #arrow {
+      top: -5px;
+    }
+
+    &[data-popper-placement^="left"] > #arrow {
+      right: -5px;
+    }
+
+    &[data-popper-placement^="right"] > #arrow {
+      left: -5px;
+    }
+
+    &[data-popper-placement^="top"] > #arrow::before {
+      border-right: 1px solid var(--u-popover-border-color);
+      border-bottom: 1px solid var(--u-popover-border-color);
+    }
+
+    &[data-popper-placement^="bottom"] > #arrow::before {
+      border-left: 1px solid var(--u-popover-border-color);
+      border-top: 1px solid var(--u-popover-border-color);
+    }
+
+    &[data-popper-placement^="left"] > #arrow::before {
+      border-right: 1px solid var(--u-popover-border-color);
+      border-top: 1px solid var(--u-popover-border-color);
+    }
+
+    &[data-popper-placement^="right"] > #arrow::before {
+      border-left: 1px solid var(--u-popover-border-color);
+      border-bottom: 1px solid var(--u-popover-border-color);
+    }
+
+    /*disabled*/
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus,
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus {
+      color: var(--u-button-disabled-text-color);
+      cursor: not-allowed;
+      background-image: none;
+      background-color: var(--u-button-disabled-bg-color);
+      border-color: var(--u-button-disabled-border-color);
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity var(--u-transition-duration);
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+}
