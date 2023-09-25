@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import { ButtonProps } from './types';
 import { ref } from "vue";
+import UIcon from "../Icon/index.vue";
 
 
 
@@ -69,6 +70,9 @@ defineExpose({
         'is-disabled': disabled,
         'is-loading': loading,
     }" :disabled="disabled || loading" :autofocus="autofocus" :type="nativeType">
+        <!-- 添加图标 -->
+        <u-icon icon="spinner" v-if="loading" spin></u-icon>
+        <u-icon :icon="icon" v-if="icon"></u-icon>
         <span>
             <slot />
         </span>
