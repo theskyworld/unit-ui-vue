@@ -23,3 +23,8 @@ next:
 
 <preview path="../previews/collapse/accordion.vue" title="手风琴模式" description="手风琴模式下，同时打开的面板会自动关闭"></preview>
 
+## 禁用
+<preview path="../previews/collapse/disabled.vue" title="禁用" description="被禁用的折叠面板不能被点击"></preview>
+
+## 嵌套
+<preview path="../previews/collapse/nest.vue" title="嵌套" description="一个折叠面板内还可以放其它折叠面板"></preview>
