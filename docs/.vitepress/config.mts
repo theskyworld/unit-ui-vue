@@ -63,6 +63,10 @@ export default defineConfig({
             text: "按钮&nbsp;Button",
             link: "../components/button.md",
           },
+          {
+            text: "折叠面板&nbsp;Collapse",
+            link: "../components/collapse.md",
+          },
         ],
       },
     ],
