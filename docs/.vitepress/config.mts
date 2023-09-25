@@ -67,6 +67,10 @@ export default defineConfig({
             text: "折叠面板&nbsp;Collapse",
             link: "../components/collapse.md",
           },
+          {
+            text: "弹出提示&nbsp;Tooltip",
+            link: "../components/tooltip.md",
+          },
         ],
       },
     ],
