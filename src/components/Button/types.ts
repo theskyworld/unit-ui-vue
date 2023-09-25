@@ -18,3 +18,8 @@ export interface ButtonProps {
 export type ButtonTypes = "primary" | "success" | "warning" | "danger" | "info";
 export type ButtonSizes = "large" | "small";
 export type NativeType = "button" | "submit" | "reset";
+
+
+export interface UButtonInstance {
+  ref: HTMLButtonElement;
+}
