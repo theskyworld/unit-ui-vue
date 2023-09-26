@@ -82,6 +82,13 @@ export default defineConfig({
         ],
       },
     ],
+    lastUpdated: {
+      text: "Updated at",
+      formatOptions: {
+        dateStyle: "full",
+        timeStyle: "medium",
+      },
+    },
   },
   markdown: {
     config(md) {
