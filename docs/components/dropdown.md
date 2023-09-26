@@ -6,8 +6,8 @@ prev:
   link: './tooltip.md'
 
 next:
-  text: '折叠面板'
-  link: './collapse.md'
+  text: '消息'
+  link: './message.md'
 ---
 
 # 下拉菜单

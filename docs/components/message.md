@@ -3,11 +3,9 @@ title: 消息Message
 description: Message组件
 prev:
   text: '下拉菜单'
-  link: '../dropdown.md'
+  link: './dropdown.md'
 
-next:
-  text: '输入框'
-  link: './input.md'
+next: false
 ---
 
 # 消息

@@ -6,7 +6,9 @@ prev:
   text: '折叠面板'
   link: './collapse.md'
 
-next: false
+next: 
+  text: '下拉菜单'
+  link: './dropdown.md'
 ---
 
 # Tooltip
