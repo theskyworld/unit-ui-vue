@@ -79,6 +79,10 @@ export default defineConfig({
             text: "消息&nbsp;Message",
             link: "../components/message.md",
           },
+          {
+            text: "图标&nbsp;Icon",
+            link: "../components/icon.md",
+          },
         ],
       },
     ],
