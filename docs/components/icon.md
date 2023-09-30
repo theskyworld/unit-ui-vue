@@ -180,3 +180,23 @@ function copyIconName(iconName : string) {
     background-color : rgb(224, 223, 223,.2);
 }
 </style>
+
+## 尺寸
+
+通过添加 `size` 属性来指定不同大小的图标，可选的值包括有`"2xs"`、`"xs"`、`"sm"`、`"lg"`、`"xl"`、`"2xl"`、`"1x"`、`"2x"`、`"3x"`、`"4x"`、`"5x"`、`"6x"`、`"7x"`、`"8x"`、`"9x"`、`"10x"`
+
+代码示例
+
+```vue
+<u-icon icon="fa-user" size="5x"></u-icon>
+```
+
+<div>
+<u-icon icon='fa-user' size='2xs'></u-icon>
+<u-icon icon='fa-user' size='sm'></u-icon>
+<u-icon icon='fa-user' size='lg'></u-icon>
+<u-icon icon='fa-user' size='2xl'></u-icon>
+<u-icon icon='fa-user' size='3x'></u-icon>
+<u-icon icon='fa-user' size='5x'></u-icon>
+
+</div>
