@@ -85,6 +85,15 @@ export default defineConfig({
           },
         ],
       },
+      {
+        text: "表单组件",
+        items: [
+          {
+            text: "输入框&nbsp;Input",
+            link: "../components/input.md",
+          },
+        ],
+      },
     ],
     lastUpdated: {
       text: "Updated at",

@@ -7,8 +7,8 @@ prev:
   link: "./message.md"
 
 next:
-  text: "弹出提示"
-  link: "./tooltip.md"
+  text: "输入框"
+  link: "./input.md"
 ---
 
 # 图标
