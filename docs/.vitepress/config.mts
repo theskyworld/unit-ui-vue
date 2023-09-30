@@ -57,7 +57,7 @@ export default defineConfig({
     // 侧边栏
     sidebar: [
       {
-        text: "通用组件",
+        text: "基础组件",
         items: [
           {
             text: "按钮&nbsp;Button",
