@@ -44,6 +44,9 @@ const emits = defineEmits(['update:modelValue'])
 
 </script>
 <template>
-    <input :type="type" :placeholder="placeholder" :value="modelValue" @input="emits('update:modelValue', $event.target.value)" />
+    <span class="inputWrapper">
+        <input :type="type" :placeholder="placeholder" :value="modelValue"
+            @input="emits('update:modelValue', $event.target.value)" />
+    </span>
 </template>
 <style scoped></style>
