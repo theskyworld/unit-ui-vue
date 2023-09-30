@@ -200,3 +200,59 @@ function copyIconName(iconName : string) {
 <u-icon icon='fa-user' size='5x'></u-icon>
 
 </div>
+
+## 变换
+
+通过添加`transform`属性来变换图标的形状，例如缩放、移动、旋转等
+
+代码示例
+
+```vue
+<u-icon icon="fa-user" transform="scale-50 rotate-30" />
+```
+
+<div class='iconContainer'>
+  <!-- 缩放 -->
+  <u-icon icon="fa-user" transform="grow-6" />
+  <u-icon icon="fa-user" transform="shrink-3" />
+
+  <!-- 移动 -->
+  <u-icon icon="fa-user" transform="left-6" />
+  <u-icon icon="fa-user" transform="up-10" />
+  <u-icon icon="fa-user" transform="down-10" />
+  <u-icon icon="fa-user" transform="right-10" />
+
+  <!-- 旋转 -->
+  <u-icon icon="fa-user" transform="rotate-30" />
+  <u-icon icon="fa-user" transform="rotate-60" />
+  <u-icon icon="fa-user" transform="rotate-90" />
+
+  <!-- 翻转 -->
+  <u-icon icon="fa-user" transform="flip-h" />
+  <u-icon icon="fa-user" transform="flip-v" />
+
+  <!-- 综合 -->
+  <u-icon icon="fa-user" transform="scale-50 rotate-30" />
+</div>
+
+## 动画
+
+通过为组件添加对应的动画名来实现图标的动画效果
+
+示例代码
+
+```vue
+<u-icon icon="fa-solid fa-heart" beat />
+```
+
+<div class="iconContainer">
+  <u-icon icon="fa-solid fa-heart" beat />
+  <u-icon icon="fa-solid fa-circle-info" beat-fade />
+  <u-icon icon="fa-solid fa-basketball" bounce />
+  <u-icon icon="fa-solid fa-triangle-exclamation" fade />
+  <u-icon icon="fa-solid fa-compact-disc" flip />
+  <u-icon icon="fa-solid fa-bell" shake />
+  <u-icon icon="fa-solid fa-cog" spin />
+  <u-icon icon="fa-solid fa-compass" spin spin-reverse />
+  <u-icon icon="fa-solid fa-spinner" spin-pulse />
+</div>
