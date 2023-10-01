@@ -19,3 +19,6 @@ next: false
 ## 禁用
 
 <preview path="../previews/input/disabled.vue" title="禁用" description="禁用的输入框"></preview>
+
+## 密码框
+<preview path="../previews/input/password.vue" title="密码框" description="密码输入框"></preview>
