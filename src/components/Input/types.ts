@@ -6,4 +6,7 @@ export interface InputProps {
 
   // 组件双向绑定
   modelValue?: any;
+
+  // 禁用
+  disabled?: boolean;
 }

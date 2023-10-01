@@ -18,4 +18,4 @@ next: false
 
 ## 禁用
 
-<preview path="../previews/dropdown/disabled.vue" title="禁用" description="添加一个disabled属性可以指定一个被禁用的下拉菜单项"></preview>
+<preview path="../previews/input/disabled.vue" title="禁用" description="禁用的输入框"></preview>

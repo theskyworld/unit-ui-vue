@@ -15,7 +15,7 @@ defineOptions({
 /* props */
 const props = withDefaults(defineProps<InputProps>(), {
     type: "text",
-    placeholder: '请输入内容...'
+    placeholder: '请输入内容...',
 })
 /* emits */
 const emits = defineEmits(['update:modelValue'])
@@ -46,7 +46,9 @@ const emits = defineEmits(['update:modelValue'])
 <template>
     <span class="inputWrapper">
         <input :type="type" :placeholder="placeholder" :value="modelValue"
-            @input="emits('update:modelValue', $event.target.value)" />
+            @input="emits('update:modelValue', $event.target.value)" :class="{
+                'disabled': disabled,
+            }" />
     </span>
 </template>
 <style scoped></style>

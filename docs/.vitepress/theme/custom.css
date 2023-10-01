@@ -72,3 +72,9 @@ li {
 .inputWrapper input:focus {
   border-color: var(--vp-c-brand-darker);
 }
+
+.disabled {
+  color: #999999;
+  cursor: not-allowed;
+  pointer-events: none;
+}
