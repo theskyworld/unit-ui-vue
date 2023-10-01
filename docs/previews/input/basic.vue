@@ -1,4 +1,3 @@
-<!-- 基础下拉菜单 -->
 <template>
     <u-input placeholder="请输入你的内容..." v-model="searchText"></u-input>
 </template>
