@@ -14,4 +14,7 @@ export interface InputProps {
   icon?: string;
   before?: boolean;
   after?: boolean;
+
+  // label
+  label?: string;
 }

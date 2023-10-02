@@ -1,13 +1,16 @@
 .inputWrapper {
   position: relative;
   display: block;
-  width: min-content;
+  width: max-content;
   margin: 5px 0;
 }
 .inputWrapper input {
   padding-left: 5px;
   padding-right: 10px;
   width: 200px;
+}
+.inputWrapper label {
+  margin-right: 5px;
 }
 
 .inputWrapper i.u-icon--before {
