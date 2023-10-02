@@ -96,6 +96,10 @@ export default defineConfig({
             text: "文本区域&nbsp;Textarea",
             link: "../components/textarea.md",
           },
+          {
+            text: "单选按钮&nbsp;Radio",
+            link: "../components/radio.md",
+          },
         ],
       },
     ],
