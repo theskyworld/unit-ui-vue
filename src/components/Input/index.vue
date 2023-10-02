@@ -35,10 +35,12 @@ onMounted(() => {
         IconApp.mount(IconWrapperElem);
         // 根据before或者after，将Icon组件实例的dom元素添加到input的前面或者后面
         const { before, after } = props;
+        if (after) {
+            inputWrapperRef.value!.append(IconWrapperElem);
+            return;
+        }
         if (before) {
             inputWrapperRef.value!.prepend(IconWrapperElem);
-        } else if (after) {
-            inputWrapperRef.value!.append(IconWrapperElem);
         }
     }
 })
@@ -70,7 +72,7 @@ onMounted(() => {
         <input :type="type" :placeholder="placeholder" :value="modelValue"
             @input="emits('update:modelValue', $event.target.value)" :class="{
                 'disabled': disabled,
-                'icon' : icon
+                'icon': icon
             }" />
     </span>
 </template>
