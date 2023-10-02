@@ -1,0 +1,12 @@
+.inputWrapper input{
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.inputWrapper i {
+    transform: translateX(20px) translateY(1px);
+}
+
+.inputWrapper input.icon{
+    padding: 0 25px;
+}

@@ -9,4 +9,9 @@ export interface InputProps {
 
   // 禁用
   disabled?: boolean;
+
+  // 图标
+  icon?: string;
+  before?: boolean;
+  after?: boolean;
 }
