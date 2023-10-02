@@ -92,6 +92,10 @@ export default defineConfig({
             text: "输入框&nbsp;Input",
             link: "../components/input.md",
           },
+          {
+            text: "文本区域&nbsp;Textarea",
+            link: "../components/textarea.md",
+          },
         ],
       },
     ],

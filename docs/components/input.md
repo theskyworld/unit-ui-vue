@@ -5,7 +5,9 @@ prev:
   text: "图标"
   link: "./icon.md"
 
-next: false
+next: 
+  text : "文本区域"
+  link : "./textarea.md"
 ---
 
 # 输入框
