@@ -22,3 +22,6 @@ next: false
 
 ## 密码框
 <preview path="../previews/input/password.vue" title="密码框" description="密码输入框"></preview>
+
+## 图标
+<preview path="../previews/input/icon.vue" title="图标" description="带有图标的输入框"></preview>
