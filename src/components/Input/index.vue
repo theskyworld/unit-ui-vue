@@ -73,7 +73,7 @@ onMounted(() => {
     <span ref="inputWrapperRef" class="inputWrapper">
         <label v-if="label" :for="label">{{ label }}</label>
         <input :id="label" :type="type" :placeholder="placeholder" :value="modelValue"
-            @input="emits('update:modelValue', $event.target.value)" :class="{
+            @input="emits('update:modelValue', ($event.target as any).value)" :class="{
                 'disabled': disabled,
                 'icon-before': icon,
                 'icon-after': after
