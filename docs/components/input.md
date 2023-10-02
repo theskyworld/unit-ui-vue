@@ -25,3 +25,7 @@ next: false
 
 ## 图标
 <preview path="../previews/input/icon.vue" title="图标" description="带有图标的输入框"></preview>
+
+## label
+<preview path="../previews/input/label.vue" title="label" description="带有label的输入框"></preview>
+
