@@ -47,7 +47,7 @@ import UIcon from "@/components/icon/index.vue";
 包含多种图标
 
 <script setup lang="ts">
-import UIcon from "@/components/icon/index.vue";
+import UIcon from "@/components/Icon/index.vue";
 import {ref} from "vue";
 
 const iconNames = ref<string[]>([
