@@ -38,7 +38,7 @@ export default defineConfig({
 
   // 网站主题配置
   themeConfig: {
-    logo:"/logo.png",
+    logo: "/logo.png",
     // 首页nav bar的内容
     nav: [
       { text: "首页", link: "/" },
@@ -99,6 +99,10 @@ export default defineConfig({
           {
             text: "单选按钮&nbsp;Radio",
             link: "../components/radio.md",
+          },
+          {
+            text: "进入动画&nbsp;AnimatedEnter",
+            link: "../components/animatedEnter.md",
           },
         ],
       },

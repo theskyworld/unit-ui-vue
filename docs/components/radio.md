@@ -5,7 +5,9 @@ prev:
   text: "文本区域"
   link: "./textarea.md"
 
-next : false
+next: 
+  text: "进入动画"
+  link: "./animatedEnter.md"
 ---
 
 # 单选按钮
