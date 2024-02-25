@@ -12,7 +12,6 @@ export default defineConfig({
   //网站title和描述
   title: "Unit UI",
   description: "Unit UI组件库",
-
   vite: {
     // 网站开发服务器运行端口
     server: {
@@ -39,6 +38,7 @@ export default defineConfig({
 
   // 网站主题配置
   themeConfig: {
+    logo:"/logo.png",
     // 首页nav bar的内容
     nav: [
       { text: "首页", link: "/" },
